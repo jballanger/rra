@@ -3,10 +3,9 @@ import { withRouter } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
 import Routes from './routes';
 
-
 const GlobalStyles = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css?family=Sarabun');
   body {
-    @import url('https://fonts.googleapis.com/css?family=Sarabun');
     font-family: 'Sarabun', sans-serif;
     background-color: #DDDDDD;
   }
@@ -19,7 +18,7 @@ class App extends Component {
   render() {
     const { history } = this.props;
     return (
-      <div>
+      <React.Fragment>
         <GlobalStyles />
         {history.location.pathname !== '/'
           ? <button onClick={history.goBack}>Back</button>
@@ -29,7 +28,7 @@ class App extends Component {
           <p>React Redux Application</p>
           <Routes />
         </div>
-      </div>
+      </React.Fragment>
     );
   }
 }
