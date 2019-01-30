@@ -8,11 +8,13 @@ export default function weather(state = initialState, action) {
       return Object.assign({}, state, {
         weather: action.weather,
         loading: false,
+        error: null,
       });
     case 'WEATHER_FAIL':
       return Object.assign({}, state, {
         error: action.error,
         loading: false,
+        weather: null,
       });
     case 'WEATHER_REQUEST':
       return Object.assign({}, state, {
