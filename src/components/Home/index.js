@@ -10,6 +10,8 @@ class Home extends Component {
     const pages = [
       { id: 0, path: '/todo', name: 'Todo' },
       { id: 1, path: '/counter', name: 'Counter' },
+      { id: 2, path: '/404', name: '404' },
+      { id: 3, path: '/weather', name: 'Weather' },
     ];
     return (
       <Container>

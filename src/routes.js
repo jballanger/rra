@@ -4,6 +4,7 @@ import Home from './components/Home';
 import NoMatch from './components/NoMatch';
 import Todo from './components/Todo';
 import Counter from './components/Counter';
+import Weather from './components/Weather';
 
 class Routes extends Component {
   render() {
@@ -12,6 +13,7 @@ class Routes extends Component {
         <Route exact path="/" component={Home} />
         <Route path="/todo" component={Todo} />
         <Route path="/counter" component={Counter} />
+        <Route path="/weather" component={Weather} />
         <Route component={NoMatch} />
       </Switch>
     );
