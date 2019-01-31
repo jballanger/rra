@@ -1,11 +1,16 @@
+import {
+  INCREMENT_COUNTER,
+  DECREMENT_COUNTER,
+} from '../constants/actionTypes';
+
 export const incrementCounter = () => {
   return {
-    type: 'INCREMENT_COUNTER',
+    type: INCREMENT_COUNTER,
   };
 };
 
 export const decrementCounter = () => {
   return {
-    type: 'DECREMENT_COUNTER',
+    type: DECREMENT_COUNTER,
   };
 };

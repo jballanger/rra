@@ -1,24 +1,29 @@
 import axios from 'axios';
+import {
+  WEATHER_REQUEST,
+  WEATHER_SUCCESS,
+  WEATHER_FAILURE
+} from '../constants/actionTypes';
 
 const openWeatherMapKey = '36c94908c8e0ed1302d9cb900d254789';
 
 export const weatherSuccess = (weather) => {
   return {
-    type: 'WEATHER_SUCCESS',
+    type: WEATHER_SUCCESS,
     weather,
   };
 };
 
 export const weatherFail = (error) => {
   return {
-    type: 'WEATHER_FAIL',
+    type: WEATHER_FAILURE,
     error,
   };
 };
 
 export const weatherRequest = () => {
   return {
-    type: 'WEATHER_REQUEST',
+    type: WEATHER_REQUEST,
   };
 };
 
